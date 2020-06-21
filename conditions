@@ -1,0 +1,25 @@
+LD x
+LT x_min
+ST too_low
+JMPC AssignMin
+
+LD x
+LT x_max
+ST too_high
+JMPC AssignMax
+
+LDN too_low
+ANDN too_high
+JMPC AssignUnchanged
+
+AssignMin:
+LD x_min
+ST out
+
+AssignMax:
+LD x_max
+ST out
+
+AssignUnchanged:
+LD x
+ST out
