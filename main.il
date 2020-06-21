@@ -1,0 +1,60 @@
+LD start
+JMPC Begin
+
+Begin:
+CAL change_if_not_valid(
+  x := alfa,
+  x_min := alfa_min,
+  x_max := alfa_max,
+  out => alfa_val
+)
+
+CAL change_if_not_valid(
+  x := beta,
+  x_min := beta_min,
+  x_max := beta_max,
+  out => beta_val
+)
+
+CAL sinus(
+  x := alfa_val,
+  sin_x => sin_alfa
+)
+
+CAL cosinus(
+  x := alfa_val,
+  cos_x => cos_alfa
+)
+
+LD alfa_val
+ADD beta_val
+SUB 180.0
+ST gamma
+
+CAL sinus(
+  x := gamma,
+  sin_x => sin_gamma
+)
+
+CAL cosinus(
+  x := gamma,
+  cos_x => cos_gamma
+)
+
+LD la
+MUL sin_alfa
+ST Kx
+
+LD la
+MUL cos_alfa
+ST Ky
+
+LD lb
+MUL sin_alfa
+ADD Kx
+ST Mx
+
+LD lb
+MUL cos_alfa
+ADD Ky
+ST Ky
