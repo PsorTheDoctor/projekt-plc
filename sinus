@@ -1,0 +1,35 @@
+LD x
+ST m1
+
+LD x
+MUL x
+MUL x
+ST x3
+DIV fact3
+ST m2
+
+LD x3
+MUL x
+MUL x
+DIV fact5
+ST m3
+
+LD x5
+MUL x
+MUl x
+ST x7
+DIV fact7
+ST m4
+
+LD x7
+MUL x 
+MUL x
+DIV fact9
+ST m5
+
+LD m1
+SUB m2
+ADD m3
+SUB m4
+ADD m5
+ST sin_x
