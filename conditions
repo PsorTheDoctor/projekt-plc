@@ -4,7 +4,7 @@ ST too_low
 JMPC AssignMin
 
 LD x
-LT x_max
+GT x_max
 ST too_high
 JMPC AssignMax
 
