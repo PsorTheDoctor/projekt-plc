@@ -1,0 +1,32 @@
+LD 1.0
+ST m1
+
+LD x 
+MUL x
+ST x2
+DIV fact2
+ST m2
+
+LD x2
+MUL x2
+ST x4
+DIV fact4
+ST m3
+
+LD x4
+MUL x2
+ST x6
+DIV fact6
+ST m4
+
+LD x6
+MUL x2
+DIV m1
+ST m5
+
+LD m1
+SUB m2
+ADD m3
+SUB m4
+ADD m5
+ST cos_x
