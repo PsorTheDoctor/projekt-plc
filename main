@@ -50,11 +50,11 @@ MUL cos_alfa
 ST Ky
 
 LD lb
-MUL sin_alfa
+MUL sin_gamma
 ADD Kx
 ST Mx
 
 LD lb
-MUL cos_alfa
+MUL cos_gamma
 ADD Ky
 ST My
