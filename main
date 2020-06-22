@@ -57,4 +57,4 @@ ST Mx
 LD lb
 MUL cos_alfa
 ADD Ky
-ST Ky
+ST My
