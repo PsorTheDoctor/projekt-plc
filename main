@@ -6,38 +6,45 @@ CAL change_if_not_valid(
   x := alfa,
   x_min := alfa_min,
   x_max := alfa_max,
-  out => alfa_val
+  out => alfa_deg
 )
 
 CAL change_if_not_valid(
   x := beta,
   x_min := beta_min,
   x_max := beta_max,
-  out => beta_val
+  out => beta_deg
 )
 
+LD alfa_deg
+MUL pi
+DIV 180.0
+ST alfa_rad
+
 CAL sinus(
-  x := alfa_val,
+  x := alfa_rad,
   sin_x => sin_alfa
 )
 
 CAL cosinus(
-  x := alfa_val,
+  x := alfa_rad,
   cos_x => cos_alfa
 )
 
-LD alfa_val
-ADD beta_val
+LD alfa_deg
+ADD beta_deg
 SUB 180.0
-ST gamma
+MUL pi
+DIV 180.0
+ST gamma_rad
 
 CAL sinus(
-  x := gamma,
+  x := gamma_rad,
   sin_x => sin_gamma
 )
 
 CAL cosinus(
-  x := gamma,
+  x := gamma_rad,
   cos_x => cos_gamma
 )
 
