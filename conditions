@@ -10,16 +10,20 @@ JMPC AssignMax
 
 LDN too_low
 ANDN too_high
+ST good
 JMPC AssignUnchanged
 
 AssignMin:
 LD x_min
-ST out
+JMP End
 
 AssignMax:
 LD x_max
-ST out
+JMP End
 
 AssignUnchanged:
 LD x
+JMP End
+
+End:
 ST out
