@@ -21,7 +21,7 @@ ST m4
 
 LD x6
 MUL x2
-DIV m1
+DIV fact8
 ST m5
 
 LD m1
